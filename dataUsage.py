@@ -95,4 +95,4 @@ print('\n\n**************************\n\n')
 os.system("tail -n 5 dataUsed.txt")
 
 if tnow == lastDay:
-    os.system(f"mv dataUsed.txt {endDate}.txt && touch dataUsed.txt")
+    os.system(f"mv dataUsed.txt 2020Usage/{endDate}.txt && touch dataUsed.txt")
