@@ -2,5 +2,6 @@ create_dates.py
 .DS_Store
 dataUsed.txt
 dates.txt
+*.pyc
 __pychache__
 /2020Usage/
