@@ -24,14 +24,14 @@ def readData():
     startDate is a constant. tnow is today.
     """
     with open('dataUsed.txt', 'r') as fRead:
+        if os.stat('dataUsed.txt').st_size == 0:
+            return 0
         for line in fRead:
+            print('********** LINE ->', line)
             pass
 
-        if line == '\n':
-            return 0
-        else:
-            last = line.split(' ')
-            return last[-1].strip()
+        last = line.split(' ')
+        return last[-1].strip()
 
 
 def writeData():
@@ -80,8 +80,7 @@ else:
     print('Yesterday was the last day of the plan!!')
 
 dataYesterday = readData()
-if dataYesterday is None:
-    dataYesterday = 0
+if dataYesterday is 0:
     dataUsedYesterday = dataUsed
 else:
     dataUsedYesterday = int(dataYesterday) - dataLeft
