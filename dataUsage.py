@@ -27,7 +27,6 @@ def readData():
         if os.stat('dataUsed.txt').st_size == 0:
             return 0
         for line in fRead:
-            print('********** LINE ->', line)
             pass
 
         last = line.split(' ')
