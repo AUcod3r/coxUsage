@@ -4,10 +4,8 @@ import datetime
 def getdates():
     with open('dates.txt', 'r+') as f:
         lineList = f.readline().split(",")
-        start = lineList[0].split("-")
-        start = datetime.date(int(start[0]), int(start[1]), int(start[2]))
-        stop = lineList[1].split("-")
-        stop = datetime.date(int(stop[0]), int(stop[1]), int(stop[2]))
+        start = datetime.date.fromisoformat(lineList[0])
+        stop = datetime.date.fromisoformat(lineList[1])
         lastDay = stop + datetime.timedelta(days=1)
         tnow = datetime.date.today()
         if tnow >= lastDay:
