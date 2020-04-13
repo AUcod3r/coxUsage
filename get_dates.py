@@ -1,4 +1,9 @@
 import datetime
+"""
+This code gets the start and stop dates for my usage period.
+
+It will also remove the start and stop dates once the period as ended.
+"""
 
 
 def getdates():
